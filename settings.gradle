@@ -12,7 +12,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         jcenter()
-        maven { url "https://www.jitpack.io" }  //Add this
+        maven { url "https://jitpack.io" }  //Add this
         maven { url "https://maven.google.com" }
 
     }
