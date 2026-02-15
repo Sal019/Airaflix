@@ -1,4 +1,4 @@
-name: Build Signed APK
+name: Build APK
 
 on:
   push:
@@ -9,62 +9,60 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+      ALIAS: ${{ secrets.ALIAS }}
+      KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+      ALIAS_PASSWORD: ${{ secrets.ALIAS_PASSWORD }}
+
     steps:
-    # 1️⃣ Checkout Project
-    - name: Checkout source
+    - name: Checkout
       uses: actions/checkout@v4
 
-    # 2️⃣ Setup Java (Required for Android Build)
-    - name: Set up JDK 17 (Required for modern Gradle)
+    - name: Setup Java
       uses: actions/setup-java@v4
       with:
         distribution: temurin
         java-version: "17"
         cache: gradle
 
-    # 3️⃣ Setup Android SDK (IMPORTANT — Missing in your workflow)
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
 
-    # 4️⃣ Make gradlew executable
-    - name: Grant permission to gradlew
+    - name: Grant gradlew permission
       run: chmod +x ./gradlew
 
-    # 5️⃣ Clean Project (Prevents random failures)
-    - name: Clean project
+    - name: Clean
       run: ./gradlew clean
 
-    # 6️⃣ Build Debug APK
     - name: Build Debug APK
       run: ./gradlew assembleDebug --stacktrace
 
-    # 7️⃣ Build Release APK (Unsigned)
-    - name: Build Release APK
+    - name: Build Release APK (unsigned)
       run: ./gradlew assembleRelease --stacktrace
 
-    # 8️⃣ Sign APK (Only if secrets exist)
-    - name: Sign Release APK
-      if: ${{ secrets.SIGNING_KEY != '' }}
+    # ✅ Sign only if key exists (NOW SAFE)
+    - name: Sign APK
+      if: env.SIGNING_KEY != ''
       uses: r0adkll/sign-android-release@v1
       id: sign_app
       with:
         releaseDirectory: app/build/outputs/apk/release
-        signingKeyBase64: ${{ secrets.SIGNING_KEY }}
-        alias: ${{ secrets.ALIAS }}
-        keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-        aliasPassword: ${{ secrets.ALIAS_PASSWORD }}
+        signingKeyBase64: ${{ env.SIGNING_KEY }}
+        alias: ${{ env.ALIAS }}
+        keyStorePassword: ${{ env.KEY_STORE_PASSWORD }}
+        aliasPassword: ${{ env.ALIAS_PASSWORD }}
 
-    # 9️⃣ Upload Debug APK
     - name: Upload Debug APK
       uses: actions/upload-artifact@v4
       with:
         name: debug-apk
         path: app/build/outputs/apk/debug/*.apk
 
-    # 🔟 Upload Signed Release APK
-    - name: Upload Release APK
-      if: ${{ secrets.SIGNING_KEY != '' }}
+    - name: Upload Release APK (Signed if available)
       uses: actions/upload-artifact@v4
       with:
         name: release-apk
-        path: ${{ steps.sign_app.outputs.signedReleaseFile }}
+        path: |
+          app/build/outputs/apk/release/*.apk
+          ${{ steps.sign_app.outputs.signedReleaseFile }}
