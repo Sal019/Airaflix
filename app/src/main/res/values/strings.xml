@@ -1,0 +1,116 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">Airaflix</string>
+
+    <string-array name="players">
+        <item>JSERIE PLAYER</item>
+        <item>MX Player</item>
+        <item>OTHER</item>
+    </string-array>
+    <string-array name="downloads">
+        <item>INSIDE DOWNLOAD</item>
+        <item>ADM</item>
+    </string-array>
+
+    <!--Change These-->
+    <string name="web_client_id" translatable="false">AIzaSyARpYkIJD4bWZ0OBym9w5ChoRQZG31x-f0</string>
+    <string name="facebook_app_id" translatable="false">722588169504097</string>
+    <string name="facebook_client_token" translatable="false">229b9c18e4617f966d9c2a390e8c138d</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1234</string>
+
+
+
+
+
+    <string name="startapp_app_id" translatable="false">201688868</string>
+    <string name="startapp_id" translatable="false">210473406</string>
+    <string name="adUnitId_Applovin" translatable="false">b238004a862d5e2a</string>
+
+
+
+    <string name="telegram" translatable="false">https://t.me/jycartoon</string>
+    <string name="site" translatable="false">https://airaflix.pp.ua/</string>
+
+
+
+    <!--all strings Strings-->
+    <string name="home_nav">Home</string>
+    <string name="series_nav">Search</string>
+    <string name="movies_nav">List</string>
+    <string name="search_nav">Downloads</string>
+    <string name="profil_nav">More</string>
+    <string name="movie_tab">MOVIES</string>
+    <string name="tv_tab">TV SHOWS</string>
+    <string name="nodownload">No Downloads</string>
+    <string name="vpn_detected">VPN Detected!!</string>
+    <string name="close_vpn">Close VPN and re-open the app to continue.</string>
+    <string name="counitnu_watch">Countinu Watching</string>
+    <string name="Trending_This_Week">Trending This Week</string>
+    <string name="recommended_for_you">recommended for you</string>
+    <string name="Most_Watched">Most Watched</string>
+    <string name="New_This_Year">New This Year</string>
+    <string name="Anouncce">Announcement</string>
+    <string name="Server">Server</string>
+    <string name="Episodes">Episodes</string>
+    <string name="Seasons">Seasons</string>
+    <string name="More_Like_This">More Like This</string>
+    <string name="Cast">Cast</string>
+    <string name="My_List">My List</string>
+    <string name="Change_Language">Change Language</string>
+    <string name="Languages">Languages</string>
+    <string name="next_episode">next episode</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="OR">OR</string>
+    <string name="LOGOUT">LOGOUT</string>
+    <string name="makeone">You Have Account Yet ? Make One Now</string>
+    <string name="full_name">full name</string>
+    <string name="next">NEXT</string>
+    <string name="username">username</string>
+    <string name="Create_Account">Create Account</string>
+
+
+
+    <string name="exit">do you want exit ?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+
+    <!-- ADS NETWORKS -->
+
+
+    <!-- Don't Change -->
+    <string name="applovin" translatable="false">AppLovin</string>
+
+    <!-- Don't Change -->
+    <string name="appnext" translatable="false">AppNext</string>
+
+    <!-- Don't Change -->
+    <string name="ironsource" translatable="false">Ironsource</string>
+
+    <!-- Don't Change -->
+    <string name="vungle" translatable="false">Vungle</string>
+
+    <!-- Don't Change -->
+    <string name="startapp" translatable="false">StartApp</string>
+    <!-- Don't Change -->
+    <string name="unityads" translatable="false">UnityAds</string>
+    <!-- Don't Change -->
+    <string name="admob" translatable="false">Admob</string>
+    <!-- Don't Change -->
+    <string name="appodeal" translatable="false">Appodeal</string>
+    <!-- Don't Change -->
+    <string name="facebook" translatable="false">Facebook</string>
+    <!-- Don't Change -->
+    <string name="auto" translatable="false">Auto</string>
+
+
+
+    <string name="main_player">Main Player</string>
+    <string name="vlc">VLC</string>
+    <string name="mx_player">MX PLAYER</string>
+    <string name="web_video_caster">Web Video Caster</string>
+    <string name="choose_your_launch_player">Choose your launch player</string>
+
+
+</resources>

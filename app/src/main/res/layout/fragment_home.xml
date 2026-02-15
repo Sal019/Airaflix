@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    android:id="@+id/scrollView"
+    android:background="@color/bgdark"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rltslid"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@color/bgdark"
+                app:sliderIndicatorEnabled="false"
+                app:sliderAutoCycleDirection="right"
+                app:sliderStartAutoCycle="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ProgressBar
+                android:id="@+id/pogsslid"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/relat_appbar"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+
+                <LinearLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="8dp"
+            android:id="@+id/studios_rlt"
+            android:layout_below="@+id/rltslid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/catigo_rv"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/pogstud"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/white" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/pin_rlt"
+            android:layout_below="@+id/studios_rlt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/pitee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_alignParentStart="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MyList"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pin_rv"
+                android:layout_below="@+id/pitee"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/progpin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/white" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="11dp"
+            android:id="@+id/continowach"
+            android:layout_below="@+id/pin_rlt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/mfuy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/counitnu_watch"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/count_rv"
+                android:layout_below="@+id/mfuy"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/progcont"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/white" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="11dp"
+
+            android:id="@+id/mostwat"
+            android:layout_below="@+id/continowach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/pietee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_alignParentStart="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Trending_This_Week"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trend_rv"
+                android:layout_below="@+id/pietee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/progmoswt"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/white" />
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="11dp"
+            android:id="@+id/mostwatcomic"
+            android:layout_below="@+id/mostwat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/pidse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_alignParentStart="true"                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommended_for_you"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/anime_rv"
+                android:layout_below="@+id/pidse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/progmoswtco"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/white" />
+
+
+
+        </RelativeLayout>
+        <com.startapp.sdk.ads.banner.Banner
+            android:visibility="gone"
+
+            android:layout_below="@+id/mostwatcomic"
+            android:id="@+id/startAppBanner"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <RelativeLayout
+            android:layout_marginTop="11dp"
+            android:id="@+id/mostwatmovie"
+            android:layout_below="@+id/startAppBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/sdty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_alignParentStart="true"                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Most_Watched"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/topmovie_rv"
+                android:layout_below="@+id/sdty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/progmoswtmovi"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/white" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="11dp"
+            android:id="@+id/ccruyear"
+            android:visibility="gone"
+            android:layout_below="@+id/mostwatmovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/zert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_alignParentStart="true"                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Most Watched Series"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/seriewatched_rv"
+                android:layout_below="@+id/zert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/proganew"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/white" />
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/ccruyear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/zerr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_alignParentStart="true"                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/New_This_Year"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/newyera_rv"
+                android:layout_below="@+id/zerr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/progayewar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/white" />
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+</ScrollView>

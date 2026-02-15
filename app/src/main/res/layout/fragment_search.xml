@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@color/bgdark"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/appsrar"
+            android:background="#1B1B1B"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                app:cardBackgroundColor="@color/darkbtn"
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchview"
+
+                    android:background="@drawable/round_corner_rect"
+                    android:textAppearance="@style/tabtext"
+                    app:queryHint="Search Here"
+                    app:autoShowKeyboard="true"
+                    android:animationCache="true"
+                    android:animateLayoutChanges="true"
+                    app:animateNavigationIcon="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+
+        <GridView
+            android:layout_below="@+id/appsrar"
+            android:scrollbars="none"
+            android:id="@+id/recentepisod_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <ProgressBar
+            android:id="@+id/progresssearch"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/white"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

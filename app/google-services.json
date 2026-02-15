@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "386912307240",
+    "firebase_url": "https://airaflix24-default-rtdb.firebaseio.com",
+    "project_id": "airaflix24",
+    "storage_bucket": "airaflix24.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386912307240:android:f0aa087a1ac44181640d1d",
+        "android_client_info": {
+          "package_name": "com.airaflix.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386912307240-jt7kbsikml8i0g45tpt8jsk3o0fev1sn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZkoSMy_A_T1-C5WTudAYwYRfwynwmohE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386912307240-jt7kbsikml8i0g45tpt8jsk3o0fev1sn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

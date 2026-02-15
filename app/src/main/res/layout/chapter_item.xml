@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/titlinf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/download_epe"
+        android:layout_toEndOf="@id/thumb"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/episode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="left"
+            android:maxLines="1"
+            android:text="Episode 1"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+        <TextView
+            android:id="@+id/anime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="left"
+            android:maxLines="1"
+            android:text=" Name"
+            android:textColor="@color/white"
+            android:textSize="9dp" />
+
+
+
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="#FFFFFF"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <ImageView
+        android:id="@+id/click"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/click_animation" />
+
+    <ImageView
+        android:id="@+id/download_epe"
+        android:layout_width="50dp"
+        android:visibility="visible"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:foreground="@drawable/click_animation_round"
+        android:padding="12dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/donwload"
+        app:tint="@color/white" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/thumb"
+        app:cardCornerRadius="3dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="120dp"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="80dp">
+
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:scaleType="centerCrop"
+                android:layout_width="120dp"
+                android:layout_height="80dp"/>
+
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/showWhems"
+                android:layout_alignParentBottom="true"
+                app:trackColor="@color/white"
+                app:indicatorColor="@color/bgbar"
+                android:progress="0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

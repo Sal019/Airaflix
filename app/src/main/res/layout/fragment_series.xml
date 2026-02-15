@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bgdark"
+    android:layout_height="match_parent">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/shimmmer"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:orientation="vertical"
+            android:columnCount="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <include layout="@layout/shimmer_item"/>
+            <include layout="@layout/shimmer_item"/>
+            <include layout="@layout/shimmer_item"/>
+
+
+
+        </GridLayout>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <GridView
+        android:scrollbars="none"
+        android:id="@+id/recentepisod_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/no_episode"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/sad"/>
+
+</RelativeLayout>

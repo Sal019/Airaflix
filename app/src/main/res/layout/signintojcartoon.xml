@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151414"
+    android:layoutDirection="ltr"
+
+    tools:context=".Activities.Auth.Signintojcartoon">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_ripple"
+            android:src="@drawable/ic_arrow_back"
+            android:theme="@style/MyRipple"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"
+            android:id="@+id/logogjj"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:tint="@color/white"
+            android:src="@drawable/logo"/>
+
+        <LinearLayout
+            android:id="@+id/user_li"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/logogjj"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="start"
+                android:layout_above="@+id/editcomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/back"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/full_name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:visibility="invisible"
+
+                    android:id="@+id/progressusersearch"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="15dp"
+                    android:indeterminateTint="@color/white"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                     />
+                <ImageButton
+                    android:visibility="invisible"
+                    android:id="@+id/imageButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/round_ripple"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/usertrue"
+                    app:tint="@color/white" />
+
+                <EditText
+                    android:id="@+id/onenameedit"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:maxLength="50"
+                    android:maxHeight="50dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:inputType="text"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/editbglogin"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="anass senpai"
+                    android:padding="13dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="12dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/email_li"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/user_li"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="start"
+                android:layout_above="@+id/editcomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/back"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/Email"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/emaileditnew"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/le_burn"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:maxLength="50"
+                android:maxHeight="50dp"
+                android:maxLines="1"
+                android:lines="1"
+                android:ellipsize="end"
+                android:inputType="text"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_toStartOf="@+id/imageButton"
+                android:background="@drawable/editbglogin"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="jcartoon@gmail.com"
+                android:padding="13dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/pass_li"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/email_li"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="start"
+                android:layout_above="@+id/editcomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/back"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/Password"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
+                    android:layout_width="match_parent"
+                    android:maxLength="50"
+                    android:maxHeight="50dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passedit"
+                        android:maxLength="50"
+                        android:maxHeight="50dp"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/le_burn"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/editbglogin"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="13dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="12dp" />
+
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@id/pass_li"
+            android:id="@+id/gotopagename"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/btnloginbg"
+            android:foreground="@drawable/click_animation_round">
+
+
+            <TextView
+                android:id="@+id/gogltt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/next"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

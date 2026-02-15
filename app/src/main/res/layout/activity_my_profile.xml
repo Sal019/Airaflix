@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:id="@+id/scrollvv"
+    android:layout_height="match_parent"
+    android:background="@color/amoled_primary_color">
+
+
+    <RelativeLayout
+        android:id="@+id/myprofil"
+        android:background="@color/amoled_primary_color"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="80dp"
+        android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/usercover"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/spbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/b"
+            app:layout_constraintBottom_toBottomOf="@+id/usercover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <ProgressBar
+            android:id="@+id/progwait"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/white"
+            android:layout_width="55dp"
+            android:layout_height="55dp"/>
+        <RelativeLayout
+            android:layout_below="@+id/appbarptof"
+            android:id="@+id/allprofil"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <RelativeLayout
+                android:id="@+id/constrr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userimg"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/jcartoonicon" />
+
+                <ImageView
+                    android:id="@+id/verify"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="-24dp"
+                    android:layout_below="@id/userimg"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/correct"
+                    android:visibility="visible"
+                    app:tint="@color/blue" />
+                <TextView
+                    android:id="@+id/nameuser"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userimg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/addate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/nameuser"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="#E1E1E1"
+                    android:textSize="11sp" />
+                <TextView
+                    android:id="@+id/profildesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textIsSelectable="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/addate"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="#E1E1E1"
+                    android:textSize="12sp" />
+
+
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/goplans1"
+                android:layout_below="@+id/constrr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Premium 1"
+                android:textColor="#CB2727"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/goplans1"
+                android:id="@+id/myaccanassemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+
+                    android:id="@+id/emaileddf"
+                    android:ellipsize="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="MY EMAIL"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_below="@+id/emaileddf"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/emailshow"
+                    android:ellipsize="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="anass@jcartoon.com"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"/>
+
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/outsign"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/myaccanassemail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="39dp"
+                android:layout_marginBottom="50dp"
+                android:backgroundTint="#CC2727"
+                android:background="@drawable/btnflooowolbg"
+                android:foreground="@drawable/click_animation_round"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/arabic_kufi"
+                        android:text="Login Out"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/appbarptof"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/backch"
+                style="@style/MyRipple"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:outlineProvider="background"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="23dp"
+                android:layout_marginStart="23dp"
+                android:id="@+id/fulnm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arabic_kufi"
+                android:text=""
+                android:layout_toEndOf="@+id/backch"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+
+                    android:id="@+id/lovethisprofi"
+                    style="@style/MyRipple"
+                    android:layout_width="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
+                    android:layout_height="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:outlineProvider="background"
+                    android:src="@drawable/heart"
+                    app:tint="@color/white" />
+                <ImageView
+
+                    android:id="@+id/morenow"
+                    style="@style/MyRipple"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:outlineProvider="background"
+                    android:src="@drawable/more"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+</ScrollView>

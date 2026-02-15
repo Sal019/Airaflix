@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+<!--    <item android:drawable="@drawable/bpo"/>-->
+
+    <item android:drawable="@drawable/black"/>
+
+    <item android:drawable="@drawable/logo"
+        android:width="100dp"
+        android:height="38dp"
+        android:gravity="center"/>
+
+
+</layer-list>

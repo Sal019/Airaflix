@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/folderdownload_fill" android:state_selected="true" />
+    <item android:drawable="@drawable/folder_download" android:state_selected="false" />
+</selector>
